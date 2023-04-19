@@ -18,6 +18,11 @@ export class WorkersController {
     return this.workersService.findOne(+salary);
   }
 
+  //В данном случае, декоратор @Param('salary') означает,
+  // что метод findOne ожидает параметр salary из маршрута.
+  // Значение этого параметра будет получено из URL-адреса
+  // запроса и передано в метод findOne в виде аргумента.
+
   //PUT запрос на изменение работника
   @Put(':id')
   update(@Param('id') id: string, @Body() updateWorkers: Worker) {
