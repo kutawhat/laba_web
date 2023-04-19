@@ -8,11 +8,9 @@ async function bootstrap() {
     .setTitle('Education API')
     .setVersion('1.0')
     .build(); // Конфигурируем сборщик документации
-
-  const document = SwaggerModule.createDocument(app, config); //создаем апи документацию
-
+  const document = SwaggerModule.createDocument(app, config); // создаем апи документацию
   SwaggerModule.setup('api_docs', app, document); //включаем документацию Swagger по пути localhost:3001/api_docs
-  await app.listen(3001); //устанавливаем порт прослушивания 3001
+  await app.listen(3000); //устанавливаем порт прослушивания 3001
   await app.setGlobalPrefix('/api'); //глобальный префикс для роутов контроллера
 }
 bootstrap();

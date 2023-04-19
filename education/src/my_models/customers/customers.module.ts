@@ -8,4 +8,4 @@ import { DatasourceModule } from 'src/datasource/datasource.module';
   providers: [CustomersService],
   imports: [DatasourceModule],
 })
-export class CustomerModule {}
+export class CustomersModule {}
